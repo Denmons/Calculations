@@ -69,15 +69,13 @@ namespace Console_Write_YAML
     {              
         static void Main(string[] args)
         {
-            var appDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var relativePath = @"sde\fsd\blueprints.yaml";
-            var fullPath = Path.Combine(appDir, relativePath);
+            var path = @"sde\fsd\blueprints.yaml";
             
             var deserializer = new DeserializerBuilder()
                 .WithNamingConvention(new CamelCaseNamingConvention())
                 .Build();
 
-            var fs = new FileStream(fullPath, FileMode.Open, FileAccess.Read);
+            var fs = new FileStream(path, FileMode.Open, FileAccess.Read);
 
             var bps = deserializer.Deserialize<Dictionary<int, Blueprint>>(new StreamReader(fs));
 
