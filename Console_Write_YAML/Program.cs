@@ -66,11 +66,11 @@ namespace Console_Write_YAML
     }
 
     class Program
-    {              
+    {
         static void Main(string[] args)
         {
-            var path = @"sde\fsd\blueprints.yaml";
-            
+            var path = Path.Combine("sde", "fsd", "blueprints.yaml");
+
             var deserializer = new DeserializerBuilder()
                 .WithNamingConvention(new CamelCaseNamingConvention())
                 .Build();
