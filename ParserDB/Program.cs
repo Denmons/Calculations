@@ -4,7 +4,7 @@ using System.IO;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace Console_Write_YAML
+namespace ParserDB
 {
     class Program
     {

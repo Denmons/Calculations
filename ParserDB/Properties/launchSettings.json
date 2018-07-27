@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ParserDB": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\Den\\source\\repos\\BlueprintCalculator"
+    }
+  }
+}
