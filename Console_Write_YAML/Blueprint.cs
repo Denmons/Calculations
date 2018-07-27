@@ -63,26 +63,4 @@ namespace Console_Write_YAML
         public int Level { get; set; }
         public int TypeID { get; set; }
     }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var path = Path.Combine("sde", "fsd", "blueprints.yaml");
-
-            var deserializer = new DeserializerBuilder()
-                .WithNamingConvention(new CamelCaseNamingConvention())
-                .Build();
-
-            var fs = new FileStream(path, FileMode.Open, FileAccess.Read);
-
-            var bps = deserializer.Deserialize<Dictionary<int, Blueprint>>(new StreamReader(fs));
-
-            fs.Close();
-
-            Console.WriteLine("Результат:"+bps[681].BlueprintTypeID);
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
-        }
-    }
 }
