@@ -18,11 +18,11 @@ namespace ParserDB
 
             var fs = new FileStream(path, FileMode.Open, FileAccess.Read);
 
-            var bps = deserializer.Deserialize<Dictionary<int, Blueprint>>(new StreamReader(fs));
+            //var bps = deserializer.Deserialize<Dictionary<int, Blueprint>>(new StreamReader(fs));
 
             fs.Close();
 
-            Console.WriteLine("Результат:" + bps[681].BlueprintTypeID);
+           // Console.WriteLine("Результат:" + bps[681].BlueprintTypeID);
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
