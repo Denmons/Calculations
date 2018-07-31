@@ -6,7 +6,7 @@ namespace ParserDB
 
     {
         public float Capacity { get; set; }
-        public int BasePrice { get; set; }
+        public float BasePrice { get; set; }
         public NameType Description { get; set; }
         public int FactionID { get; set; }
         public int GraphicID { get; set; }

@@ -20,7 +20,7 @@ namespace ParserDB
 
             //var fs = new FileStream(pathBlueprints, FileMode.Open, FileAccess.Read);
             var fs = new FileStream(pathTypeid, FileMode.Open, FileAccess.Read);
-            var fs_stream = (TextReader)(new StreamReader(fs));
+            var fs_stream = new StreamReader(fs);
 
             //var bps = deserializer.Deserialize<Dictionary<int, Blueprint>>(new StreamReader(fs));
             var tps = deserializer.Deserialize<Dictionary<int, TypeItem>>(fs_stream);
