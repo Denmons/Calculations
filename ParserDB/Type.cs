@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace ParserDB
 {
     public class TypeItem
+
     {
         public float Capacity { get; set; }
         public int BasePrice { get; set; }
@@ -28,14 +27,14 @@ namespace ParserDB
 
     public class NameType
     {
-        public string en { get; set; }
-        public string ru { get; set; }
+        public string En { get; set; }
+        public string Ru { get; set; }
     }
 
     public class TraitsType
     {
         public List<RoleBonusesType> RoleBonuses;
-        public Dictionary<int, RoleBonusesType> Types;
+        public Dictionary<int, List<RoleBonusesType>> Types;
     }
 
     public class RoleBonusesType
@@ -45,10 +44,6 @@ namespace ParserDB
         public int Importance { get; set; }
         public int UnitID { get; set; }
     }
-
-    public class RoleBonusesListType
-    {
-        public List<RoleBonusesType> Bonus { get; set; }
-    }
+       
 }
 
